@@ -1,0 +1,25 @@
+int count(Tnode r) {
+					if (r == null)
+						return 0;
+					else {
+						int left = count(r.left);
+						int right = count(r.right);
+						return left + right + 1;
+					}
+				}
+
+				int Depth(Tnode r) {
+					if (r == null)
+						return 0;
+					else {
+						int left = Depth(r.left);
+						int right = Depth(r.right);
+						return Math.max(left, right) + 1;
+					}
+				}
+			case 4:
+				System.out.println("Total nodes in tree:" + onj.count(onj.root));
+				break;
+			case 5:
+				System.out.println("Depth of tree:" + (onj.Depth(onj.root) - 1));
+				break;

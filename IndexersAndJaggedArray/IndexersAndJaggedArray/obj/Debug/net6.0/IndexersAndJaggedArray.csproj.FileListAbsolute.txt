@@ -1,0 +1,15 @@
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\bin\Debug\net6.0\IndexersAndJaggedArray.exe
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\bin\Debug\net6.0\IndexersAndJaggedArray.deps.json
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\bin\Debug\net6.0\IndexersAndJaggedArray.runtimeconfig.json
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\bin\Debug\net6.0\IndexersAndJaggedArray.dll
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\bin\Debug\net6.0\IndexersAndJaggedArray.pdb
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.dll
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\refint\IndexersAndJaggedArray.dll
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.pdb
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\IndexersAndJaggedArray.genruntimeconfig.cache
+C:\Users\CDAC\Desktop\Lab .net\IndexersAndJaggedArray\IndexersAndJaggedArray\obj\Debug\net6.0\ref\IndexersAndJaggedArray.dll

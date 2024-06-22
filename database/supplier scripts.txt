@@ -1,0 +1,181 @@
+CREATE TABLE supplier (
+    sno varchar(5) PRIMARY KEY,
+    sname VARCHAR(25) NOT NULL,
+    status int not null,
+    city varchar(20) not null
+);
+
+
+
+insert into supplier(sno, sname, status, city)values
+    ('s01', 'smith', 20, 'london');,
+    ('s02', 'jones', 10, 'parris'),
+    ('s03', 'blake', 30, 'parris'),
+    ('s04', 'clark', 20, 'london'),
+    ('s05', 'adams', 30, 'athens');
+    
+
+
+CREATE TABLE parts (
+    pno varchar(5) PRIMARY KEY,
+    pname VARCHAR(25) NOT NULL,
+    color varchar(10) not null,
+    weight numeric(5,1) not null,   
+    city varchar(20) not null
+);
+
+insert into parts(pno, pname, color, weight, city)values
+    ('p1', 'nut', 'red', 12, 'london'),
+    ('p2', 'bolt', 'green', 17, 'parris'),
+    ('p3', 'screw', 'blur', 17, 'rome'),
+    ('p4', 'cam', 'blue', 12, 'paris'),
+    ('p5', 'cog', 'red', 19, 'london');
+
+
+
+insert into sept(empno, empname, basic, deptno, depthead)values
+('0002', 'HIREN', '8000', '20','0001'),
+('0003', 'ALI', '4000', '10', '0001'),
+('0004', 'GEORGE', '6000', '20', '0002'); 
+
+
+
+mysql> create table project(
+    -> jno varchar(6) primary key,
+    -> jname varchar(25) not null,
+    -> city varchar(20) not null);
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> desc project;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| jno   | varchar(6)  | NO   | PRI | NULL    |       |
+| jname | varchar(25) | NO   |     | NULL    |       |
+| city  | varchar(20) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.07 sec)
+
+mysql> insert into project(jno,jname,city) values
+    -> ('J1','SORTER','PARIS');
+    -> ('J2','DISPLAY','ROME');
+    -> ('J3','OCR','ATHENS');
+    -> ('J4','CONSOLE','ATHENS');
+    -> ('J5','RAID','LONDON');
+    -> ('J6','EDS','OSLO');
+    -> ('J7','TAPE','LONDON');
+Query OK, 7 row affected (0.08 sec)
+
+
+mysql> select * from project;
++-----+---------+--------+
+| jno | jname   | city   |
++-----+---------+--------+
+| J1  | SORTER  | PARIS  |
+| J2  | DISPLAY | ROME   |
+| J3  | OCR     | ATHENS |
+| J4  | CONSOLE | ATHENS |
+| J5  | RAID    | LONDON |
+| J6  | EDS     | OSLO   |
+| J7  | TAPE    | LONDON |
++-----+---------+--------+
+7 rows in set (0.00 sec)
+
+
+
+
+
+CREATE TABLE child_table (
+    column1 datatype,
+    column2 datatype,
+    -- Other columns
+
+    
+FOREIGN KEY (column_name) REFERENCES parent_table(parent_column)
+    
+);
+
+
+
+create table shipment(
+sno varchar(5) not null,
+pno varchar(6) not null,
+jno varchar(6) not null,
+qty int not null,
+FOREIGN KEY (sno) REFERENCES supplier(sno),
+FOREIGN KEY (pno) REFERENCES parts(pno),
+FOREIGN KEY (jno) REFERENCES project(jno)
+);
+
+mysql> desc shipment;
++-------+------------+------+-----+---------+-------+
+| Field | Type       | Null | Key | Default | Extra |
++-------+------------+------+-----+---------+-------+
+| sno   | varchar(5) | NO   | MUL | NULL    |       |
+| pno   | varchar(6) | NO   | MUL | NULL    |       |
+| jno   | varchar(6) | NO   | MUL | NULL    |       |
+| qty   | int        | NO   |     | NULL    |       |
++-------+------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+
+mysql> insert into shipment values
+    -> ('s01','P1','J1',200),
+    -> ('s01','P1','J4',700),
+    -> ('s02','P3','J1',400),
+    -> ('s02','P3','J2',200),
+    -> ('s02','P3','J3',200),
+    -> ('s02','P3','J4',500),
+    -> ('s02','P3','J5',600),
+    -> ('s02','P3','J6',400),
+    -> ('s02','P3','J7',800),
+    -> ('s02','P5','J2',100),
+    -> ('s03','P3','J1',200),
+    -> ('s03','P4','J2',500),
+    -> ('s04','P5','J3',300),
+    -> ('s04','P5','J7',300),
+    -> ('s05','P2','J2',200),
+    -> ('s05','P2','J4',100),
+    -> ('s05','P5','J5',500),
+    -> ('s05','P5','J7',100),
+    -> ('s05','P5','J2',200),
+    -> ('s05','P1','J4',100),
+    -> ('s05','P3','J4',200),
+    -> ('s05','P4','J4',800),
+    -> ('s05','P5','J4',400);
+Query OK, 23 rows affected (0.07 sec)
+Records: 23  Duplicates: 0  Warnings: 0
+
+
+mysql> select * from shipment;
++-----+-----+-----+-----+
+| sno | pno | jno | qty |
++-----+-----+-----+-----+
+| s01 | P1  | J1  | 200 |
+| s01 | P1  | J4  | 700 |
+| s02 | P3  | J1  | 400 |
+| s02 | P3  | J2  | 200 |
+| s02 | P3  | J3  | 200 |
+| s02 | P3  | J4  | 500 |
+| s02 | P3  | J5  | 600 |
+| s02 | P3  | J6  | 400 |
+| s02 | P3  | J7  | 800 |
+| s02 | P5  | J2  | 100 |
+| s03 | P3  | J1  | 200 |
+| s03 | P4  | J2  | 500 |
+| s04 | P5  | J3  | 300 |
+| s04 | P5  | J7  | 300 |
+| s05 | P2  | J2  | 200 |
+| s05 | P2  | J4  | 100 |
+| s05 | P5  | J5  | 500 |
+| s05 | P5  | J7  | 100 |
+| s05 | P5  | J2  | 200 |
+| s05 | P1  | J4  | 100 |
+| s05 | P3  | J4  | 200 |
+| s05 | P4  | J4  | 800 |
+| s05 | P5  | J4  | 400 |
++-----+-----+-----+-----+
+23 rows in set (0.00 sec)
+
+
+

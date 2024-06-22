@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CollectionDemo/1.0.0": {
+        "dependencies": {
+          "SchoolManagementLibrary": "1.0.0"
+        },
+        "runtime": {
+          "CollectionDemo.dll": {}
+        }
+      },
+      "SchoolManagementLibrary/1.0.0": {
+        "runtime": {
+          "SchoolManagementLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CollectionDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SchoolManagementLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

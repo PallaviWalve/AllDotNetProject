@@ -1,0 +1,169 @@
+CREATE TABLE product(
+    proid numeric(5) Primary key,
+    proname VARCHAR(14),
+    quantity numeric(5),
+    price numeric(5)
+    
+);
+
+insert into product (proid,proname,quantity,price) values(
+(5471,'mobile',4,38200),
+(0782,'bluetooth',10,12273),
+(3454,'speakers',2,9360),
+(9124,'led lights',24,4800),
+(7255,'smart tv',1,44500)
+);
+
+insert into zip(zip,city,state)
+value();
+(2501, 'debitcard'),
+(2502, 'creditcard'),
+(2503, 'ATM card'));
+(103, 'diga007@gmail.com', 'digmbar', 'bhalke', 'nilanga', 'nilanga', 445346, 346, 98712));,
+
+
+
+
+
+
+create table SEPT(
+empno char(4),
+empname char(20),
+basic float,
+deptno char(2),
+depthead char(4));
+
+insert into SEPT values(
+(0001, 'SUNIL', 6000, 10),
+(0002, 'HIREN', 8000, 20),
+(0003, 'ALI', 4000, 10, 0001),
+(0004, 'GEORGE', 6000, 20, 0002));
+
+
+
+
+
+
+create table SDEPT(
+DEPTNO CHAR(2)
+DEPTNAME CHAR(15));
+
+insert into SDEPT values (
+(10, 'development'),
+(20, 'training'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE emp(
+    empno INT,
+    ename VARCHAR(10),
+    job VARCHAR(9),
+    mgr INT,
+    hiredate DATE,
+    sal DECIMAL(7,2),
+    comm DECIMAL(7,2),
+    deptno INT,
+   constraint pk_emp primary key (empno),
+   constraint fk_deptno foreign key (deptno) references dept (deptno)
+);
+
+
+INSERT INTO emp VALUES
+(7839, 'KING', 'PRESIDENT', null, '1981-11-17', 5000, null, 10),
+(7698, 'BLAKE', 'MANAGER', 7839,'1981-05-01', 2850, null, 30),
+(7782, 'CLARK', 'MANAGER', 7839, '1981-06-09', 2450, null, 10),
+(7566, 'JONES', 'MANAGER', 7839, '1981-04-02',2975, null, 20),
+(7788, 'SCOTT', 'ANALYST', 7566, '1981-04-19',3000, null, 20),
+(7902, 'FORD', 'ANALYST', 7566, '1981-03-12', 3000, null, 20),
+(7369, 'SMITH', 'CLERK', 7902,'1980-12-17', 800, null, 20),
+(7499, 'ALLEN', 'SALESMAN', 7698,'1981-02-20', 1600, 300, 30),
+(7521, 'WARD', 'SALESMAN', 7698, '1981-02-22',1250, 500, 30),
+(7654, 'MARTIN', 'SALESMAN', 7698,'1981-09-28',1250, 1400, 30),
+(7844, 'TURNER', 'SALESMAN', 7698,'1981-09-08',1500, 0, 30),
+(7876, 'ADAMS', 'CLERK', 7788, '1987-05-23',1100, null, 20),
+(7900, 'JAMES', 'CLERK', 7698,'1981-03-12',950, null, 30),
+(7934, 'MILLER', 'CLERK', 7782,'1982-01-23',1300, null, 10);
+
+
+
+
+
+
+
+
+
+
+
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lnt                |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use lnt;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_lnt |
++---------------+
+| customer      |
+| dept          |
+| emp           |
++---------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from customer;
++--------+----------+----------------+------------+------------+---------+
+| custid | custname | address        | city       | postalcode | country |
++--------+----------+----------------+------------+------------+---------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK      |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA   |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON  |
++--------+----------+----------------+------------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql>

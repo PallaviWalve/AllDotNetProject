@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CalculatorApp/1.0.0": {
+        "dependencies": {
+          "CalculatorLogic": "1.0.0",
+          "ShoppingBussinessLogic": "1.0.0"
+        },
+        "runtime": {
+          "CalculatorApp.dll": {}
+        }
+      },
+      "CalculatorLogic/1.0.0": {
+        "runtime": {
+          "CalculatorLogic.dll": {}
+        }
+      },
+      "ShoppingBussinessLogic/1.0.0": {
+        "runtime": {
+          "ShoppingBussinessLogic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalculatorApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculatorLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShoppingBussinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

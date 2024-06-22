@@ -1,0 +1,15 @@
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\bin\Debug\net6.0\AsyncawaitDemo.exe
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\bin\Debug\net6.0\AsyncawaitDemo.deps.json
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\bin\Debug\net6.0\AsyncawaitDemo.runtimeconfig.json
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\bin\Debug\net6.0\AsyncawaitDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\bin\Debug\net6.0\AsyncawaitDemo.pdb
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\refint\AsyncawaitDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.pdb
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\AsyncawaitDemo.genruntimeconfig.cache
+C:\Users\CDAC\Desktop\Lab .net\AsyncawaitDemo\AsyncawaitDemo\obj\Debug\net6.0\ref\AsyncawaitDemo.dll

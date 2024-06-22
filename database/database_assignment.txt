@@ -1,0 +1,568 @@
+1. Create table Customers with following columns
+cust_Id   Primary key
+CustomerName  Not Null, 
+Address, 
+City, 
+PostalCode,
+Country  default 'India'
+
+2. Insert 10 records inside the Customers.
+
+3. Display all customers.
+
+4. Write a statement that will select the City column from the Customers table.
+
+5.Select all the different values from the Country column in the Customers table.
+
+6.Select all records where the City column has the value "Berlin"
+
+7.Use the NOT keyword to select all records where City is NOT "Berlin".
+
+8.Select all records where the CustomerID column has the value 32
+
+10.Select all records where the City column has the value 'Berlin' and the PostalCode column has the value 12209.
+
+11.Select all records where the City column has the value 'Berlin' or 'London'.
+
+12. Select all records from the Customers table, sort the result alphabetically by the column City.
+
+13.Select all records from the Customers table, sort the result reversed alphabetically by the column City.
+
+14.Select all records from the Customers table, sort the result alphabetically, first by the column Country, then, by the column City.
+
+15.Select all records from the Customers where the PostalCode column is empty.
+
+16.Select all records from the Customers where the PostalCode column is NOT empty.
+
+17.Update the City column of all records in the Customers table.
+
+18.Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway"
+
+19.Update the City value and the Country value.
+
+20.Delete all the records from the Customers table where the Country value is 'Norway'.
+
+21. Delete all the records from the Customers table.
+
+27.Select all records where the value of the City column starts with the letter "a".
+
+28.Select all records where the value of the City column ends with the letter "a".
+
+29.Select all records where the value of the City column contains the letter "a"
+
+30.Select all records where the value of the City column starts with letter "a" and ends with the letter "b".
+
+22.Use the MIN function to select the record with the smallest value of the Price column
+
+23.Use an SQL function to select the record with the highest value of the Price column.
+
+24.Use the correct function to return the number of records that have the Price value set to 18.
+
+25.Use an SQL function to calculate the average price of all products
+
+26.Use an SQL function to calculate the sum of all the Price column values in the Products table.
+
+
+
+
+mysql> use lnt;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_lnt |
++---------------+
+| customer      |
+| dept          |
+| emp           |
++---------------+
+3 rows in set (0.00 sec)
+
+
+
+mysql> select * from customer;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select city from customer;
++------------+
+| city       |
++------------+
+| Ahmedabad  |
+| california |
+| pune       |
+| dublin     |
+| ontario    |
+| Mumbai     |
+| manchester |
+| edinburgh  |
+| monument   |
+| sidney     |
++------------+
+10 rows in set (0.00 sec)
+
+mysql> select distinct country from customer;
++-----------+
+| country   |
++-----------+
+| INDIA     |
+| UK        |
+| ENGLAND   |
+| LONDON    |
+| DUBAI     |
+| AUSTRALIA |
++-----------+
+6 rows in set (0.07 sec)
+
+mysql> select * from customer where city='berlin';
+Empty set (0.00 sec)
+
+mysql> select * from customer where city is not 'berlin';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''berlin'' at line 1
+mysql> select * from customer where city  not 'berlin';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''berlin'' at line 1
+mysql> select * from customer where city is not berlin;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'berlin' at line 1
+mysql> select * from customer where city not berlin;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'berlin' at line 1
+mysql> select * from customer where not city='berlin';
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer where cusid=32;
+ERROR 1054 (42S22): Unknown column 'cusid' in 'where clause'
+mysql> select * from customer where custid=32;
+Empty set (0.00 sec)
+
+mysql> select * from customer where city='berlin' and postalcode=1220;
+Empty set (0.00 sec)
+
+mysql> select * from customer where city='berlin' or city='london';
+Empty set (0.00 sec)
+
+mysql> select * from customer where city='berlin' or city='LONDON';
+Empty set (0.00 sec)
+
+mysql> select * from customer order by city asc;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.06 sec)
+
+mysql> select * from customer order by city desc;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer order by country asc,city asc;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer where postalcode='null';
+Empty set, 1 warning (0.00 sec)
+
+mysql> select * from customer where postalcode is null;
+Empty set (0.00 sec)
+
+mysql> select * from customer where postalcode!='null';
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set, 1 warning (0.00 sec)
+
+mysql> select * from customer where not postalcode  null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1
+mysql> select * from customer where not postalcode is  null;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql>
+
+
+
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer order by country asc,city asc;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer where postalcode='null';
+Empty set, 1 warning (0.00 sec)
+
+mysql> select * from customer where postalcode is null;
+Empty set (0.00 sec)
+
+mysql> select * from customer where postalcode!='null';
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set, 1 warning (0.00 sec)
+
+mysql> select * from customer where not postalcode  null;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1
+mysql> select * from customer where not postalcode is  null;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | LONDON    |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> update customer set country='UK' where custid=105;
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from customer ;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | dublin     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | ontario    |     219355 | UK        |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | manchester |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sidney     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> update customer set city='berlin' where custid=105;
+Query OK, 1 row affected (0.37 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update customer set city='mexico' where custid=104;
+Query OK, 1 row affected (0.37 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update customer set city='california' where custid=107;
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update customer set city='sweden' where custid=110;
+Query OK, 1 row affected (0.43 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from customer ;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | mexico     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | berlin     |     219355 | UK        |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | california |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | monument   |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sweden     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> update customer set city='Oslo' where country='dubai';
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from customer ;
++--------+----------+----------------+------------+------------+-----------+
+| custid | custname | address        | city       | postalcode | country   |
++--------+----------+----------------+------------+------------+-----------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA     |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK        |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA     |
+|    104 | Geeta    | churchil road  | mexico     |     242795 | ENGLAND   |
+|    105 | Nagesh   | jain road      | berlin     |     219355 | UK        |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA     |
+|    107 | Hardik   | ind area       | california |     672319 | UK        |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND   |
+|    109 | kaushik  | jabeel park    | Oslo       |     100246 | DUBAI     |
+|    110 | pawan    | art of lawry   | sweden     |     666006 | AUSTRALIA |
++--------+----------+----------------+------------+------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> update customer set city='Oslo' where country='norway';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update customer set  country='norway' where custid=110;
+Query OK, 1 row affected (0.15 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update customer set  country='norway' where custid=107;
+Query OK, 1 row affected (0.43 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from customer ;
++--------+----------+----------------+------------+------------+---------+
+| custid | custname | address        | city       | postalcode | country |
++--------+----------+----------------+------------+------------+---------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK      |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA   |
+|    104 | Geeta    | churchil road  | mexico     |     242795 | ENGLAND |
+|    105 | Nagesh   | jain road      | berlin     |     219355 | UK      |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA   |
+|    107 | Hardik   | ind area       | california |     672319 | norway  |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND |
+|    109 | kaushik  | jabeel park    | Oslo       |     100246 | DUBAI   |
+|    110 | pawan    | art of lawry   | sweden     |     666006 | norway  |
++--------+----------+----------------+------------+------------+---------+
+10 rows in set (0.00 sec)
+
+mysql> delete * from customer where country='norway';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* from customer where country='norway'' at line 1
+mysql> delete from customer where country='norway';
+Query OK, 2 rows affected (0.10 sec)
+
+mysql> select * from customer ;
++--------+----------+----------------+------------+------------+---------+
+| custid | custname | address        | city       | postalcode | country |
++--------+----------+----------------+------------+------------+---------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK      |
+|    103 | Sham     | wagholi        | pune       |     453523 | INDIA   |
+|    104 | Geeta    | churchil road  | mexico     |     242795 | ENGLAND |
+|    105 | Nagesh   | jain road      | berlin     |     219355 | UK      |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA   |
+|    108 | Komal    | ameerpeth      | edinburgh  |     679130 | ENGLAND |
+|    109 | kaushik  | jabeel park    | Oslo       |     100246 | DUBAI   |
++--------+----------+----------------+------------+------------+---------+
+8 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> select * from customer where city like 'a%';
++--------+----------+----------+-----------+------------+---------+
+| custid | custname | address  | city      | postalcode | country |
++--------+----------+----------+-----------+------------+---------+
+|    101 | Ramesh   | near rto | Ahmedabad |     453536 | INDIA   |
++--------+----------+----------+-----------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from customer where city like '%a';
++--------+----------+----------------+------------+------------+---------+
+| custid | custname | address        | city       | postalcode | country |
++--------+----------+----------------+------------+------------+---------+
+|    102 | Seeta    | shivaji palace | california |     100473 | UK      |
++--------+----------+----------------+------------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * from customer where city like '%a%';
++--------+----------+----------------+------------+------------+---------+
+| custid | custname | address        | city       | postalcode | country |
++--------+----------+----------------+------------+------------+---------+
+|    101 | Ramesh   | near rto       | Ahmedabad  |     453536 | INDIA   |
+|    102 | Seeta    | shivaji palace | california |     100473 | UK      |
+|    106 | Chaitali | panvel         | Mumbai     |     287453 | INDIA   |
++--------+----------+----------------+------------+------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from customer where city like 'a%' and city like '%b';
+Empty set (0.00 sec)
+
+mysql>
+
+
+mysql> drop table customer;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select * from customer;
+ERROR 1146 (42S02): Table 'lnt.customer' doesn't exist
+mysql>
+
+
+mysql> desc product;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| proid    | decimal(5,0) | NO   | PRI | NULL    |       |
+| proname  | varchar(14)  | YES  |     | NULL    |       |
+| quantity | decimal(5,0) | YES  |     | NULL    |       |
+| price    | decimal(5,0) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql>
+
+
+
+mysql> select min(price) from product;
++------------+
+| min(price) |
++------------+
+|       4800 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select max(price) from product;
++------------+
+| max(price) |
++------------+
+|      44500 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(price) from product;
++------------+
+| avg(price) |
++------------+
+| 21826.6000 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(price) from product;
++------------+
+| sum(price) |
++------------+
+|     109133 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select count(price) from product where price=18;
++--------------+
+| count(price) |
++--------------+
+|            0 |
++--------------+
+1 row in set (0.37 sec)
+
+mysql>
+
+
+

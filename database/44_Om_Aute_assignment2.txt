@@ -1,0 +1,380 @@
+
+Name: 44_Om Chandrakant Aute
+Roll no: 44
+
+MET IIT CDAC-ATC Nashik
+Batch PGDAC SEP-2023
+Lab Assignments
+Date : 30-Sep-2023
+Module Name: Database Technology
+=============================================================================================================
+
+Ecommerce database
+
+1. create the customer table  with the given structure 
+custid int PRIMARY KEY
+email_address varchar(75) 
+first_name varchar(50)
+last_name varchar(50)
+address1 varchar(50)
+address2 varchar(50)
+customer_zip varchar(10)
+area_code char(3)
+telephone_number char(7)
+
+insert 3 records 
+
+
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 28
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| lnt                |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> use lnt;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_lnt |
++---------------+
+| dept          |
+| emp           |
+| product       |
++---------------+
+3 rows in set (0.01 sec)
+
+mysql> create table customer(
+    -> custid int primary key,
+    -> email_address varchar(75),
+    -> first_name varchar(50),
+    -> last_name varchar(50),
+    -> address1 varchar(50),
+    -> address2 varchar(50),
+    -> customer_zip varchar(10),
+    -> area_code char(3),
+    -> telephone_number char(7));
+Query OK, 0 rows affected (0.97 sec)
+
+mysql> desc customer;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| custid           | int         | NO   | PRI | NULL    |       |
+| email_address    | varchar(75) | YES  |     | NULL    |       |
+| first_name       | varchar(50) | YES  |     | NULL    |       |
+| last_name        | varchar(50) | YES  |     | NULL    |       |
+| address1         | varchar(50) | YES  |     | NULL    |       |
+| address2         | varchar(50) | YES  |     | NULL    |       |
+| customer_zip     | varchar(10) | YES  |     | NULL    |       |
+| area_code        | char(3)     | YES  |     | NULL    |       |
+| telephone_number | char(7)     | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+9 rows in set (0.01 sec)
+
+mysql> insert into customer(custid,email_address,first_name,last_name,address1,address2,customer_zip,area_code,telephone_number)values
+    -> (101, 'shitalp123@gmail.com', 'shital', 'pawar', 'sangali', 'pune', 445237, 237, 43848);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into customer(custid,email_address,first_name,last_name,address1,address2,customer_zip,area_code,telephone_number)
+    -> value
+    -> (102, 'atulgr27@yahoo.com', 'atul', 'reddy', 'latur', 'latur', 413531, 531, 22345);
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into customer(custid,email_address,first_name,last_name,address1,address2,customer_zip,area_code,telephone_number)
+    -> value
+    -> (103, 'diga007@gmail.com', 'digmbar', 'bhalke', 'nilanga', 'nilanga', 445346, 346, 98712);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from customer;
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+| custid | email_address        | first_name | last_name | address1 | address2 | customer_zip | area_code | telephone_number |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+|    101 | shitalp123@gmail.com | shital     | pawar     | sangali  | pune     | 445237       | 237       | 43848            |
+|    102 | atulgr27@yahoo.com   | atul       | reddy     | latur    | latur    | 413531       | 531       | 22345            |
+|    103 | diga007@gmail.com    | digmbar    | bhalke    | nilanga  | nilanga  | 445346       | 346       | 98712            |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+============================================================================================================
+
+2. create the cardinfo table  with the given structure 
+
+card_id int PRIMARY KEY
+ccnum varchar(16)
+ccexp date
+name_on_card varchar(100)
+email_address varchar(75)
+
+insert 3 records 
+
+
+mysql> create table cardinfo(
+    -> card_id int primary key,
+    -> ccnum varchar(16),
+    -> ccexp date,
+    -> name_on_card varchar(100),
+    -> email_address varchar(75));
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> desc cardinfo;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| card_id       | int          | NO   | PRI | NULL    |       |
+| ccnum         | varchar(16)  | YES  |     | NULL    |       |
+| ccexp         | date         | YES  |     | NULL    |       |
+| name_on_card  | varchar(100) | YES  |     | NULL    |       |
+| email_address | varchar(75)  | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> insert into cardinfo(card_id,ccnum,ccexp,name_on_card,email_address)
+    -> value
+    -> (1, 634582762912, '2045-12-01', 'Atul g reddy', 'atulgr27@yahoo.com');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into cardinfo(card_id,ccnum,ccexp,name_on_card,email_address)
+    -> value
+    -> (2, 978452762912, '2034-03-22', 'digmbar bhalke', 'diga007@gmail.com');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into cardinfo(card_id,ccnum,ccexp,name_on_card,email_address)
+    -> value
+    -> (3, 975427552782, '2028-01-14', 'srivalli pushpa', 'zookega_nhi_sala02@gmail.com');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from cardinfo;
++---------+--------------+------------+-----------------+------------------------------+
+| card_id | ccnum        | ccexp      | name_on_card    | email_address                |
++---------+--------------+------------+-----------------+------------------------------+
+|       1 | 634582762912 | 2045-12-01 | Atul g reddy    | atulgr27@yahoo.com           |
+|       2 | 978452762912 | 2034-03-22 | digmbar bhalke  | diga007@gmail.com            |
+|       3 | 975427552782 | 2028-01-14 | srivalli pushpa | zookega_nhi_sala02@gmail.com |
++---------+--------------+------------+-----------------+------------------------------+
+3 rows in set (0.00 sec)
+
+============================================================================================================
+
+3. create the cardtype table  with the given structure 
+card_id int  PRIMARY KEY
+card_type varchar(20)
+
+insert 3 records 
+
+mysql> create table cardtype(
+    -> card_id int primary key,
+    -> card_type varchar(20));
+Query OK, 0 rows affected (0.16 sec)
+
+
+mysql> desc cardtype;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| card_id   | int         | NO   | PRI | NULL    |       |
+| card_type | varchar(20) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> insert into cardtype(card_id,card_type)
+    -> value
+    -> (2501, 'MASTER');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into cardtype(card_id,card_type)
+    -> value(2502, 'VISA');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into cardtype(card_id,card_type)
+    -> value(2503, 'RUPAY');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from cardtype;
++---------+------------+
+| card_id | card_type  |
++---------+------------+
+|    2501 |   MASTER   |
+|    2502 |   VISA     |
+|    2503 |   RUPAY    |
++---------+------------+
+3 rows in set (0.00 sec)
+
+mysql>
+
+===============================================================================================================
+
+4.create the locale table  with the given structure 
+
+zip varchar(10) PRIMARY KEY
+city varchar(50)
+state char(2)
+
+insert 3 records 
+
+mysql> select * from zip;
+Empty set (0.01 sec)
+
+mysql> desc zip;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| zip   | varchar(10) | NO   | PRI | NULL    |       |
+| city  | varchar(50) | YES  |     | NULL    |       |
+| state | char(2)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into zip(zip,city,state)value(445237, 'pune', 'MH');
+Query OK, 1 row affected (0.09 sec)
+
+mysql> insert into zip(zip,city,state)value(413531, 'latur', 'RJ');
+Query OK, 1 row affected (0.40 sec)
+
+mysql> insert into zip(zip,city,state)value(445346, 'nilanga', 'KA');
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from zip;
++--------+---------+-------+
+| zip    | city    | state |
++--------+---------+-------+
+| 413531 | latur   | RJ    |
+| 445237 | pune    | MH    |
+| 445346 | nilanga | KA    |
++--------+---------+-------+
+3 rows in set (0.00 sec)
+
+
+5. see the structure of the table created.
+
+----------------------------------------
+1. in a customer  table , update one of the record of your choice and change the address1 as boston.
+
+mysql> desc customer;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| custid           | int         | NO   | PRI | NULL    |       |
+| email_address    | varchar(75) | YES  |     | NULL    |       |
+| first_name       | varchar(50) | YES  |     | NULL    |       |
+| last_name        | varchar(50) | YES  |     | NULL    |       |
+| address1         | varchar(50) | YES  |     | NULL    |       |
+| address2         | varchar(50) | YES  |     | NULL    |       |
+| customer_zip     | varchar(10) | YES  |     | NULL    |       |
+| area_code        | char(3)     | YES  |     | NULL    |       |
+| telephone_number | char(7)     | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+9 rows in set (0.01 sec)
+
+mysql> select * from customer;
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+| custid | email_address        | first_name | last_name | address1 | address2 | customer_zip | area_code | telephone_number |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+|    101 | shitalp123@gmail.com | shital     | pawar     | sangali  | pune     | 445237       | 237       | 43848            |
+|    102 | atulgr27@yahoo.com   | atul       | reddy     | latur    | latur    | 413531       | 531       | 22345            |
+|    103 | diga007@gmail.com    | digmbar    | bhalke    | nilanga  | nilanga  | 445346       | 346       | 98712            |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> update customer set address1='boston' where custid=101;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from customer;
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+| custid | email_address        | first_name | last_name | address1 | address2 | customer_zip | area_code | telephone_number |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+|    101 | shitalp123@gmail.com | shital     | pawar     | boston   | pune     | 445237       | 237       | 43848            |
+|    102 | atulgr27@yahoo.com   | atul       | reddy     | latur    | latur    | 413531       | 531       | 22345            |
+|    103 | diga007@gmail.com    | digmbar    | bhalke    | nilanga  | nilanga  | 445346       | 346       | 98712            |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+3 rows in set (0.00 sec)
+
+2. in a customer  table , update one of the record of your choice and change the customer_zip as 100 300.
+
+mysql> update customer set customer_zip='100 300' where custid=103;
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from customer;
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+| custid | email_address        | first_name | last_name | address1 | address2 | customer_zip | area_code | telephone_number |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+|    101 | shitalp123@gmail.com | shital     | pawar     | boston   | pune     | 445237       | 237       | 43848            |
+|    102 | atulgr27@yahoo.com   | atul       | reddy     | latur    | latur    | 413531       | 531       | 22345            |
+|    103 | diga007@gmail.com    | digmbar    | bhalke    | nilanga  | nilanga  | 100 300      | 346       | 98712            |
++--------+----------------------+------------+-----------+----------+----------+--------------+-----------+------------------+
+3 rows in set (0.00 sec)
+
+
+3. delete the first record, give the proper condition in cardinfo.
+
+mysql> delete from cardinfo where card_id=1;
+Query OK, 1 row affected (0.09 sec)
+
+mysql> select * from cardinfo;
++---------+--------------+------------+-----------------+------------------------------+
+| card_id | ccnum        | ccexp      | name_on_card    | email_address                |
++---------+--------------+------------+-----------------+------------------------------+
+|       2 | 978452762912 | 2034-03-22 | digmbar bhalke  | diga007@gmail.com            |
+|       3 | 975427552782 | 2028-01-14 | srivalli pushpa | zookega_nhi_sala02@gmail.com |
++---------+--------------+------------+-----------------+------------------------------+
+2 rows in set (0.00 sec)
+
+mysql>
+
+4. truncate the table cardinfo
+
+mysql> truncate table cardinfo;
+Query OK, 0 rows affected (0.22 sec)
+
+mysql> select * from cardinfo;
+Empty set (0.00 sec)
+
+
+5. see the structure of cardinfo 
+
+mysql> select * from cardinfo;
+Empty set (0.00 sec)
+
+mysql> desc cardinfo;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| card_id       | int          | NO   | PRI | NULL    |       |
+| ccnum         | varchar(16)  | YES  |     | NULL    |       |
+| ccexp         | date         | YES  |     | NULL    |       |
+| name_on_card  | varchar(100) | YES  |     | NULL    |       |
+| email_address | varchar(75)  | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+
+6. drop the table cardtype.
+
+mysql> drop table cardtype;
+Query OK, 0 rows affected (0.12 sec)
+
+=============================================================================================================

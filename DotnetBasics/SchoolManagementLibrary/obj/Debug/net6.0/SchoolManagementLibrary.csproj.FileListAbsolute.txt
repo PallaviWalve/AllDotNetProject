@@ -1,0 +1,12 @@
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\bin\Debug\net6.0\SchoolManagementLibrary.deps.json
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\bin\Debug\net6.0\SchoolManagementLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\bin\Debug\net6.0\SchoolManagementLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\refint\SchoolManagementLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\SchoolManagementLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\SchoolManagementLibrary\obj\Debug\net6.0\ref\SchoolManagementLibrary.dll

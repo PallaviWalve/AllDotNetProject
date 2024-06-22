@@ -1,0 +1,12 @@
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\bin\Debug\net6.0\DelegatesLibrary.deps.json
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\bin\Debug\net6.0\DelegatesLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\bin\Debug\net6.0\DelegatesLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\refint\DelegatesLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\DelegatesLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\DelegateDemo\DelegatesLibrary\obj\Debug\net6.0\ref\DelegatesLibrary.dll

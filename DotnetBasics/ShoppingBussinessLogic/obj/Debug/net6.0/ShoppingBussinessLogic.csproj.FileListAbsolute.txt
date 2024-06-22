@@ -1,0 +1,12 @@
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\bin\Debug\net6.0\ShoppingBussinessLogic.deps.json
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\bin\Debug\net6.0\ShoppingBussinessLogic.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\bin\Debug\net6.0\ShoppingBussinessLogic.pdb
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\refint\ShoppingBussinessLogic.dll
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ShoppingBussinessLogic.pdb
+C:\Users\CDAC\Desktop\Lab .net\DotnetBasics\ShoppingBussinessLogic\obj\Debug\net6.0\ref\ShoppingBussinessLogic.dll

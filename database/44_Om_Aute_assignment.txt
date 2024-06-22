@@ -1,0 +1,890 @@
+
+NAME: Om Chandrakant Aute
+Rollno: 44
+=============================
+
+MET IIT CDAC-ATC Nashik
+Batch PGDAC SEP-2023
+Lab Assignments
+Date : 05-Oct-2023
+Due Date: 07-OCT-2023
+Module Name: Database (SQL Exercise)
+--------------------------------------
+
+
+	-----Exercise 1-----
+
+
+1. Create the table SEMP with the following structure:-
+
+ EMPNO CHAR(4)
+ EMPNAME CHAR(20)
+ BASIC FLOAT
+ DEPTNO CHAR(2)
+ DEPTHEAD CHAR(4)
+
+
+create table SEPT(
+empno char(4),
+empname char(20),
+basic float,
+deptno char(2),
+depthead char(4));
+
+mysql> desc sept;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| empno    | char(4)  | YES  |     | NULL    |       |
+| empname  | char(20) | YES  |     | NULL    |       |
+| basic    | float    | YES  |     | NULL    |       |
+| deptno   | char(2)  | YES  |     | NULL    |       |
+| depthead | char(4)  | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+5 rows in set (0.10 sec)
+
+==============================================================
+
+2. Create the table SDEPT with the following structure:-
+
+ DEPTNO CHAR(2)
+ DEPTNAME CHAR(15)
+
+
+mysql> create table SDEPT(
+    -> deptno char(2),
+    -> deptname char(15));
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> desc sdept;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| deptno   | char(2)  | YES  |     | NULL    |       |
+| deptname | char(15) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+==============================================================
+
+3. Insert into the SDEPT table the following values:-
+
+10, Development
+20, Training
+
+mysql> insert into SDEPT values
+    -> (10, 'development');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into SDEPT values
+    -> (20, 'training');
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from sdept;
++--------+-------------+
+| deptno | deptname    |
++--------+-------------+
+| 10     | development |
+| 20     | training    |
++--------+-------------+
+2 rows in set (0.00 sec)
+
+==============================================================
+
+4. Insert into the SEMP table the following values:-
+
+0001, SUNIL, 6000, 10, 0002
+0002, HIREN, 8000, 20, 0001
+0003, ALI, 4000, 10, 0001
+0004, GEORGE, 6000, 20, 0002 
+
+mysql> insert into sept(empno, empname, basic, deptno, depthead)values
+    -> ('0001', 'SUNIL', '6000', '10', '0002'),
+    -> ('0002', 'HIREN', '8000', '20','0001'),
+    -> ('0003', 'ALI', '4000', '10', '0001'),
+    -> ('0004', 'GEORGE', '6000', '20', '0002');
+Query OK, 4 rows affected (0.09 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from sept;
++-------+---------+-------+--------+----------+
+| empno | empname | basic | deptno | depthead |
++-------+---------+-------+--------+----------+
+| 0001  | SUNIL   |  6000 | 10     | 0002     |
+| 0002  | HIREN   |  8000 | 20     | 0001     |
+| 0003  | ALI     |  4000 | 10     | 0001     |
+| 0004  | GEORGE  |  6000 | 20     | 0002     |
++-------+---------+-------+--------+----------+
+4 rows in set (0.00 sec)
+=========================================================================================
+
+
+	mysql>     select *  from supplier;              
+	+-----+-------+--------+--------+
+	| sno | sname | status | city   |
+	+-----+-------+--------+--------+
+	| s01 | smith |     20 | london |
+	| s02 | jones |     10 | parris |
+	| s03 | blake |     30 | parris |
+	| s04 | clark |     20 | london |
+	| s05 | adams |     30 | athens |
+	+-----+-------+--------+--------+
+	5 rows in set (0.06 sec)
+
+
+	mysql> select * from parts;
+	+-----+-------+-------+--------+--------+
+	| pno | pname | color | weight | city   |
+	+-----+-------+-------+--------+--------+
+	| p1  | nut   | red   |   12.0 | london |
+	| p2  | bolt  | green |   17.0 | parris |
+	| p3  | screw | blur  |   17.0 | rome   |
+	| p4  | cam   | blue  |   12.0 | paris  |
+	| p5  | cog   | red   |   19.0 | london |
+	+-----+-------+-------+--------+--------+
+	5 rows in set (0.00 sec)
+
+	mysql> select * from project;
+	+-----+---------+--------+
+	| jno | jname   | city   |
+	+-----+---------+--------+
+	| J1  | SORTER  | PARIS  |
+	| J2  | DISPLAY | ROME   |
+	| J3  | OCR     | ATHENS |
+	| J4  | CONSOLE | ATHENS |
+	| J5  | RAID    | LONDON |
+	| J6  | EDS     | OSLO   |
+	| J7  | TAPE    | LONDON |
+	+-----+---------+--------+
+	7 rows in set (0.00 sec)
+
+
+
+	
+
+ 	---- Exercise 2 ----
+
+
+1. Display the Supplier table in the descending order of CITY.
+
+mysql> select * from supplier order by city desc;
++-----+-------+--------+--------+
+| sno | sname | status | city   |
++-----+-------+--------+--------+
+| s02 | jones |     10 | parris |
+| s03 | blake |     30 | parris |
+| s01 | smith |     20 | london |
+| s04 | clark |     20 | london |
+| s05 | adams |     30 | athens |
++-----+-------+--------+--------+
+5 rows in set (0.00 sec)
+==================================================================
+
+2. Display the Part Table in the ascending order of CITY and within the city in
+the ascending order of Part names.
+
+mysql> select * from parts order by city,pname;
++-----+-------+-------+--------+--------+
+| pno | pname | color | weight | city   |
++-----+-------+-------+--------+--------+
+| p5  | cog   | red   |   19.0 | london |
+| p1  | nut   | red   |   12.0 | london |
+| p4  | cam   | blue  |   12.0 | paris  |
+| p2  | bolt  | green |   17.0 | parris |
+| p3  | screw | blur  |   17.0 | rome   |
++-----+-------+-------+--------+--------+
+5 rows in set (0.00 sec)
+=======================================================================
+
+3. Display all the Suppliers with a status between 10 and 20.
+
+mysql> select * from supplier where status between 10 and 20;
++-----+-------+--------+--------+
+| sno | sname | status | city   |
++-----+-------+--------+--------+
+| s01 | smith |     20 | london |
+| s02 | jones |     10 | parris |
+| s04 | clark |     20 | london |
++-----+-------+--------+--------+
+3 rows in set (0.13 sec)
+=============================================================================
+
+4. Display all the Parts and their Weight, which are not in the range of 10 and 15.
+
+mysql> select pname,weight from parts where weight not between 10 and 15;
++-------+--------+
+| pname | weight |
++-------+--------+
+| bolt  |   17.0 |
+| screw |   17.0 |
+| cog   |   19.0 |
++-------+--------+
+3 rows in set (0.00 sec)
+=============================================================================
+
+5. Display all the Part names starting with the letter ‘S’.
+
+mysql> select pname from parts where pname like 's%';
++-------+
+| pname |
++-------+
+| screw |
++-------+
+1 row in set (0.04 sec)
+=======================================================================
+
+6. Display all the Suppliers, belonging to cities starting with the letter ‘L’.
+
+mysql> select * from supplier where city like 'l%';
++-----+-------+--------+--------+
+| sno | sname | status | city   |
++-----+-------+--------+--------+
+| s01 | smith |     20 | london |
+| s04 | clark |     20 | london |
++-----+-------+--------+--------+
+2 rows in set (0.00 sec)
+===========================================================================
+
+7. Display all the Projects, with the third letter in JNAME as ‘n’. 
+
+mysql> select * from project where jname like '__n%';
++-----+---------+--------+
+| jno | jname   | city   |
++-----+---------+--------+
+| J4  | CONSOLE | ATHENS |
++-----+---------+--------+
+1 row in set (0.00 sec)
+=========================================================================
+
+
+		----- Exercise 3 -----
+
+
+1. Display all the Supplier names with the initial letter capital.
+
+mysql> select concat(upper(substr(sname,1,1)),lcase(substr(sname,2,length(sname))))
+    -> 'first_name_capital' from supplier;
++--------------------+
+| first_name_capital |
++--------------------+
+| Smith              |
+| Jones              |
+| Blake              |
+| Clark              |
+| Adams              |
++--------------------+
+5 rows in set (0.06 sec)
+=======================================================================================
+
+2. Display all the Supplier names in upper case.
+
+mysql> select upper(sname) as supplier_name from supplier;
++---------------+
+| supplier_name |
++---------------+
+|  SMITH        |
+|  JONES        |
+|  BLAKE        |
+|  CLARK        |
+|  ADAMS        |
++---------------+
+5 rows in set (0.00 sec)
+===================================================================================
+
+3. Display all the Supplier names in lower case.
+
+mysql> select lower(sname) as supplier_name from supplier;
++---------------+
+| supplier_name |
++---------------+
+|  smith        |
+|  jones        |
+|  blake        |
+|  clark        |
+|  adams        |
++---------------+
+5 rows in set (0.00 sec)
+==================================================================================
+
+4. Display all the Supplier names padded to 25 characters, with spaces on the left.
+
+mysql> select lpad(sname,25,' ') as supplier_names from supplier;
++---------------------------+
+| lpad(sname,25,' ')        |
++---------------------------+
+|                     SMITH |
+|                     JONES |
+|                     BLAKE |
+|                     CLARK |
+|                     ADAMS |
++---------------------------+
+5 rows in set (0.01 sec)
+==============================================================================
+
+5. Display all the Supplier names (with ‘la’ replaced by ‘ro’).
+ HINT: REPLACE.
+
+mysql> select sname,replace(sname,'la','ro') as re_sname from supplier;
++-------+----------+
+| sname | re_sname |
++-------+----------+
+| smith | smith    |
+| jones | jones    |
+| blake | broke    |
+| clark | crork    |
+| adams | adams    |
++-------+----------+
+5 rows in set (0.00 sec)
+===============================================================================
+
+6. Implement the above command such that ‘l’ is replaced with ‘r’ and ‘a’ is replaced
+with ‘o’.
+
+mysql> select sname,replace(replace(sname,'l','r'),'a','o')as r_sname from supplier;
++-------+---------+
+| sname | r_sname |
++-------+---------+
+| smith | smith   |
+| jones | jones   |
+| blake | broke   |
+| clark | crork   |
+| adams | odoms   |
++-------+---------+
+5 rows in set (0.00 sec)
+===================================================================================
+
+7. Display the Supplier names and the lengths of the names.
+
+mysql> select sname,length(sname) from supplier;
++-------+---------------+
+| sname | length(sname) |
++-------+---------------+
+| smith |             5 |
+| jones |             5 |
+| blake |             5 |
+| clark |             5 |
+| adams |             5 |
++-------+---------------+
+5 rows in set (0.00 sec)
+===================================================================================
+
+8. Use the soundex function to search for a supplier by the name of ‘BLOKE’.
+
+mysql>  select sname from supplier where soundex(sname) = soundex('bloke');
++-------+
+| sname |
++-------+
+| blake |
++-------+
+1 row in set (0.09 sec)
+=================================================================================
+
+9. Display the Supplier name and the status (as Ten, Twenty, Thirty, etc.).
+
+
+=================================================================================
+
+10. Display the current day (e.g. Thursday)
+
+mysql> select dayname(curdate());
++--------------------+
+| dayname(curdate()) |
++--------------------+
+| Sunday             |
++--------------------+
+1 row in set (0.05 sec)
+===================================================================================
+
+
+	-----Exercise 4-----
+
+
+
+1. Display the minimum Status in the Supplier table.
+
+mysql> select min(status) from supplier;
++-------------+
+| min(status) |
++-------------+
+|          10 |
++-------------+
+1 row in set (0.15 sec)
+===================================================================
+
+2. Display the maximum Weight in the Parts table.
+
+mysql> select max(weight) from parts;
++-------------+
+| max(weight) |
++-------------+
+|        19.0 |
++-------------+
+1 row in set (0.00 sec)
+=================================================================
+
+3. Display the average Weight of the Parts.
+
+mysql> select avg(weight) from parts;
++-------------+
+| avg(weight) |
++-------------+
+|    15.40000 |
++-------------+
+1 row in set (0.00 sec)
+=================================================================
+
+4. Display the total Quantity sold for part ‘P1’.
+
+mysql> select sum(qty) from shipment where pno ='p1';
++----------+
+| sum(qty) |
++----------+
+|     1000 |
++----------+
+1 row in set (0.07 sec)
+==================================================================
+
+5. Display the total Quantity sold for each part.
+
+mysql> select pno,sum(qty) from shipment group by pno;
++-----+----------+
+| pno | sum(qty) |
++-----+----------+
+| P1  |     1000 |
+| P2  |      300 |
+| P3  |     3500 |
+| P4  |     1300 |
+| P5  |     1900 |
++-----+----------+
+5 rows in set (0.08 sec)
+====================================================================
+
+6. Display the average Quantity sold for each part.
+
+mysql> select avg(qty) from shipment;
++----------+
+| avg(qty) |
++----------+
+| 347.8261 |
++----------+
+1 row in set (0.00 sec)
+===================================================================
+
+7. Display the maximum Quantity sold for each part, provided the maximum Quantity
+is greater than 800.
+
+mysql> select pno,sum(qty) maxqty from shipment group by pno having maxqty > 800;
++-----+--------+
+| pno | maxqty |
++-----+--------+
+| P1  |   1000 |
+| P3  |   3500 |
+| P4  |   1300 |
+| P5  |   1900 |
++-----+--------+
+4 rows in set (0.06 sec)
+=============================================================================
+
+8. Display the Status and the count of Suppliers with that Status.
+
+mysql> select status, count(status) as count from supplier group by status;
++--------+-------+
+| status | count |
++--------+-------+
+|     20 |     2 |
+|     10 |     1 |
+|     30 |     2 |
++--------+-------+
+3 rows in set (0.08 sec)
+================================================================================
+
+9. Display the count of Projects going on in different cities.
+
+mysql> select jno, count(jno) from shipment group by jno;
++-----+------------+
+| jno | count(jno) |
++-----+------------+
+| J1  |          3 |
+| J2  |          5 |
+| J3  |          2 |
+| J4  |          7 |
+| J5  |          2 |
+| J6  |          1 |
+| J7  |          3 |
++-----+------------+
+7 rows in set (0.00 sec)
+=============================================================================
+
+10. What is the difference between COUNT(Status) and COUNT(*) ?
+
+mysql> select count(status) from supplier;
++---------------+
+| count(status) |
++---------------+
+|             5 |
++---------------+
+1 row in set (0.00 sec)
+-------------------------------------------------------
+mysql> select count(*) from supplier;
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.00 sec)
+===================================================================================
+
+11. Display the Status and the Count of Suppliers with that Status in the following format
+as shown below:-
+Status Count
+Ten 1
+Twenty 2
+Thirty 3 
+
+
+mysql> select
+    ->  CASE
+    ->       WHEN status = 10 THEN 'Ten'
+    ->       WHEN status = 20 THEN 'Twenty'
+    ->       WHEN status = 30 THEN 'Thirty'
+    ->  END status,
+    -> count(status) from supplier group by status;
++--------+---------------+
+| status | count(status) |
++--------+---------------+
+| Twenty |             2 |
+| Ten    |             1 |
+| Thirty |             2 |
++--------+---------------+
+3 rows in set, 1 warning (0.00 sec)
+===================================================================================
+
+
+	-----Exercise 5-----
+
+
+1. Display the Supplier name and the Quantity sold.
+mysql> select sname, sum(qty) from supplier inner join shipment on supplier.sno = shipment.sno group by sname;
++-------+----------+
+| sname | sum(qty) |
++-------+----------+
+| SMITH |      900 |
+| JONES |     3200 |
+| BLAKE |      700 |
+| CLARK |      600 |
+| ADAMS |     2600 |
++-------+----------+
+5 rows in set (0.00 sec)
+=================================================================================================
+
+2. Display the Part name and Quantity sold.
+mysql> select pname, sum(qty) from part inner join shipment on part.pno = shipment.pno group by pname;
++-------+----------+
+| pname | sum(qty) |
++-------+----------+
+| NUT   |     1000 |
+| BOLT  |      300 |
+| SCREW |     4800 |
+| CAM   |     1100 |
+| COG   |      800 |
++-------+----------+
+5 rows in set (0.00 sec)
+===========================================================================================
+
+3. Display the Project name and Quantity sold.
+
+mysql> select jname, sum(qty) from project inner join shipment on project.jno = shipment.jno group by jname;
++---------+----------+
+| jname   | sum(qty) |
++---------+----------+
+| SORTER  |      800 |
+| DISPLAY |     1200 |
+| OCR     |      500 |
+| CONSOLE |     2800 |
+| RAID    |     1100 |
+| EDS     |      400 |
+| TAPE    |     1200 |
++---------+----------+
+7 rows in set (0.00 sec)
+=========================================================================================
+
+4. Display the Supplier name, Part name, Project name and Quantity sold.
+mysql> select sname,pname,jname, sum(qty) from shipment sh
+    ->      inner join supplier s on sh.sno = s.sno
+    ->      inner join part p on sh.pno = p.pno
+    ->      inner join project pr on sh.jno = pr.jno group by sname,pname,jname;
++-------+-------+---------+----------+
+| sname | pname | jname   | sum(qty) |
++-------+-------+---------+----------+
+| SMITH | NUT   | SORTER  |      200 |
+| SMITH | NUT   | CONSOLE |      700 |
+| JONES | SCREW | SORTER  |      400 |
+| JONES | SCREW | DISPLAY |      200 |
+| JONES | SCREW | OCR     |      200 |
+| JONES | SCREW | CONSOLE |      500 |
+| JONES | SCREW | RAID    |      600 |
+| JONES | SCREW | EDS     |      400 |
+| JONES | SCREW | TAPE    |      800 |
+| JONES | CAM   | DISPLAY |      100 |
+| BLAKE | SCREW | SORTER  |      200 |
+| BLAKE | SCREW | DISPLAY |      500 |
+| CLARK | COG   | OCR     |      300 |
+| CLARK | COG   | TAPE    |      300 |
+| ADAMS | BOLT  | DISPLAY |      200 |
+| ADAMS | BOLT  | CONSOLE |      100 |
+| ADAMS | CAM   | RAID    |      500 |
+| ADAMS | CAM   | TAPE    |      100 |
+| ADAMS | COG   | DISPLAY |      200 |
+| ADAMS | NUT   | CONSOLE |      100 |
+| ADAMS | SCREW | CONSOLE |     1000 |
+| ADAMS | CAM   | CONSOLE |      400 |
++-------+-------+---------+----------+
+22 rows in set (0.00 sec)
+=============================================================================================
+
+5. Display the Supplier name, Supplying Parts to a Project in the same City.
+select s.sname,p.pname,pr.jname from supplier s
+          inner join shipment sh on s.sno = sh.sno
+          inner join part p on sh.pno = p.pno
+          inner join project pr on sh.jno = pr.jno
+	where s.city = pr.city;
++-------+-------+---------+
+| sname | pname | jname   |
++-------+-------+---------+
+| JONES | SCREW | SORTER  |
+| BLAKE | SCREW | SORTER  |
+| CLARK | COG   | TAPE    |
+| ADAMS | BOLT  | CONSOLE |
+| ADAMS | NUT   | CONSOLE |
+| ADAMS | SCREW | CONSOLE |
+| ADAMS | SCREW | CONSOLE |
+| ADAMS | CAM   | CONSOLE |
++-------+-------+---------
+===================================================================================
+
+6. Display the Part name that is ‘Red’ is color, and the Quantity sold.
+
+ select pname,sum(qty) from part p
+     inner join shipment sh on p.pno = sh.pno
+     where p.color = 'red' group by pname;
+
++-------+----------+
+| pname | sum(qty) |
++-------+----------+
+| NUT   |     1000 |
+| SCREW |     1300 |
+| COG   |      800 |
++-------+----------+
+3 rows in set (0.00 sec)
+==================================================================================
+
+7. Display all the Quantity sold by Suppliers with the Status = 20.
+
+ select status,sum(qty) from supplier s
+     inner join shipment sh on s.sno = sh.sno
+     where s.status = 20 group by status;
+
++--------+----------+
+| status | sum(qty) |
++--------+----------+
+|     20 |     1500 |
++--------+----------+
+1 row in set (0.00 sec)
+=================================================================================
+
+8. Display all the Parts and Quantity with a Weight > 14.
+
+ select pname,weight,sum(qty) from part p
+     inner join shipment sh on p.pno = sh.pno
+     where p.weight >14 group by pname,weight;
+
++-------+--------+----------+
+| pname | weight | sum(qty) |
++-------+--------+----------+
+| BOLT  |   17.0 |      300 |
+| SCREW |   17.0 |     3500 |
+| COG   |   19.0 |      800 |
++-------+--------+----------+
+3 rows in set (0.00 sec)
+===================================================================================
+
+9. Display all the Project names and City, which has bought more than 500 Parts.
+
+
+select j.jno,j.jname , j.city from project j
+inner join shipment s on j.jno = s.jno
+group by j.jno, j.jname,j.city having sum(s.qty) > 500;
+
++-----+---------+--------+
+| jno | jname   | city   |
++-----+---------+--------+
+| J1  | SORTER  | PARIS  |
+| J2  | DISPLAY | ROME   |
+| J4  | CONSOLE | ATHENS |
+| J5  | RAID    | LONDON |
+| J7  | TAPE    | LONDON |
++-----+---------+--------+
+5 rows in set (0.00 sec)
+===================================================================================
+
+10. Display all the Part names and Quantity sold that have a Weight less than 15.
+
+select p.pname, p.weight, sum(qty) from part p
+inner join shipment s on s.pno = p.pno where p.weight <15 group by p.pname,p.weight;
++-------+--------+----------+
+| pname | weight | sum(qty) |
++-------+--------+----------+
+| NUT   |   12.0 |     1000 |
+| SCREW |   14.0 |     1300 |
+| CAM   |   12.0 |     1100 |
++-------+--------+----------+
+3 rows in set (0.00 sec)
+=====================================================================================
+
+11. Display all the Employee names and the name of their Managers
+
+mysql> select a.ename,b.ename manager from emp a,emp b where a.mgr = b.empno;
++--------+---------+
+| ename  | manager |
++--------+---------+
+| FORD   | JONES   |
+| SCOTT  | JONES   |
+| JAMES  | BLAKE   |
+| TURNER | BLAKE   |
+| MARTIN | BLAKE   |
+| WARD   | BLAKE   |
+| ALLEN  | BLAKE   |
+| MILLER | CLARK   |
+| ADAMS  | SCOTT   |
+| CLARK  | KING    |
+| BLAKE  | KING    |
+| JONES  | KING    |
+| SMITH  | FORD    |
++--------+---------+
+13 rows in set (0.00 sec)
+=====================================================================================
+
+
+	------Exercise 6------
+
+
+1. Display all the Suppliers with the same Status as the supplier, ‘CLARK’.
+mysql> select sname from supplier where status = (select status from supplier where sname ='CLARK');
++-------+
+| sname |
++-------+
+| SMITH |
+| CLARK |
++-------+
+2 rows in set (0.00 sec)
+
+=====================================================================================
+
+2. Display all the Employees in the same department as the employee ‘MILLER’.
+
+mysql> select * from emp where deptno = (select deptno from emp where ename = 'MILLER');
++-------+--------+-----------+------+------------+---------+------+--------+
+| empno | ename  | job       | mgr  | hiredate   | sal     | comm | deptno |
++-------+--------+-----------+------+------------+---------+------+--------+
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 | NULL |     10 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 | NULL |     10 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 | NULL |     10 |
++-------+--------+-----------+------+------------+---------+------+--------+
+
+=====================================================================================
+
+3. Display all the Parts which have more Weight than all the Red parts.
+
+mysql> select * from part where weight > all (select weight from part where color = 'RED');
+Empty set (0.00 sec)
+
+=====================================================================================
+
+4. Display all the Projects going on in the same city as the project ‘TAPE’.
+
+mysql> select * from project where city = (select city from project where jname='tape');
++-----+-------+--------+
+| JNO | JNAME | CITY   |
++-----+-------+--------+
+| J5  | RAID  | LONDON |
+| J7  | TAPE  | LONDON |
++-----+-------+--------+
+2 rows in set (0.00 sec)
+
+=====================================================================================
+
+5. Display all the Parts with Weight less than all the Green parts.
+
+mysql> select * from part where weight < all (select weight from part where color='green');
++-----+-------+-------+--------+--------+
+| PNO | PNAME | COLOR | WEIGHT | CITY   |
++-----+-------+-------+--------+--------+
+| P1  | NUT   | RED   |   12.0 | LONDON |
+| P4  | SCREW | RED   |   14.0 | LONDON |
+| P5  | CAM   | BLUE  |   12.0 | PARIS  |
++-----+-------+-------+--------+--------+
+3 rows in set (0.00 sec)
+
+=====================================================================================
+
+6. Display the name of the Supplier who has sold the maximum Quantity (in one sale).
+
+mysql> select s.sname from supplier s
+    -> inner join shipment sh on s.sno = sh.sno
+    -> order by sh.qty desc
+    -> limit 1;
++-------+
+| sname |
++-------+
+| JONES |
++-------+
+1 row in set (0.00 sec)
+
+=====================================================================================
+
+7. Display the name of the Employee with the minimum Salary.
+mysql> select ename from emp where sal = all(select min(sal) from emp);
++-------+
+| ename |
++-------+
+| SMITH |
++-------+
+1 row in set (0.00 sec)
+
+=====================================================================================
+
+8. Display the name of the Supplier who has sold the maximum overall Quantity (sum of Sales)
+
+select s.sname from supplier s
+    -> inner join shipment sh on s.sno=sh.sno
+    -> group by s.sname
+    -> order by sum(sh.qty) desc
+    -> limit 1;
++-------+
+| sname |
++-------+
+| JONES |
++-------+
+1 row in set (0.00 sec)
+
+=====================================================================================
+
+9. Display the name of the Department with the maximum number of Employees. 
+
+ SELECT d.dname AS DepartmentName
+    -> FROM dept d
+    -> INNER JOIN (
+    ->     SELECT deptno, COUNT(*) AS EmployeeCount
+    ->     FROM emp
+    ->     GROUP BY deptno
+    ->     ORDER BY EmployeeCount DESC
+    ->     LIMIT 1
+    -> ) max_employee_count ON d.deptno = max_employee_count.deptno;
++----------------+
+| DepartmentName |
++----------------+
+| SALES          |
++----------------+
+1 row in set (0.01 sec)
+
+=====================================================================================
