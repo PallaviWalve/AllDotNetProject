@@ -23,8 +23,13 @@ namespace HelperLibrary
 
         public CustomerBAL FindCustomer(int id)
         {
-            dal.FindCustomer(id);
+            CustomerBAL bal = dal.FindCustomer(id);
+            return bal;
+        }
 
+        public void UpdateCustomer(int id, CustomerBAL bal)
+        {
+            dal.UpdateCustomer(id, bal);
         }
     }
 }

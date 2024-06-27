@@ -44,11 +44,14 @@ namespace DataAccessLibrary
 
         public CustomerBAL FindCustomer(int id)
         {
-            DataSet ds = ConnectAndGetData();
-            DataRow drow = ds.Tables["dt_customer"].Rows.Find(id);
-            ConnectAndGetData();
-
+                DataSet ds = ConnectAndGetData();
+                DataRow drow = ds.Tables["dt_customer"].Rows.Find(id);
+                CustomerBAL bal = new CustomerBAL();
+                 bal.CustomerId = (int)drow["CustomerId"];
+                 bal.CustName = drow["CustomerName"].ToString();
+                return bal;
         }
+
         private static void ConnectandUpdateServer(DataSet ds)
         {
             SqlConnection cn = new SqlConnection(cnstring);
@@ -71,6 +74,15 @@ namespace DataAccessLibrary
             da.Fill(ds, "dt_customer");
             //da1.Fill(ds, "dt_products");
             return ds;
+        }
+
+        public void UpdateCustomer(int id, CustomerBAL details)
+        {
+            DataSet ds = ConnectAndGetData();
+            DataRow drow = ds.Tables["dt_customer"].Rows.Find(id);
+            drow["CustomerId"] = details.CustomerId;
+            drow["CustomerName"] = details.CustName;
+            ConnectandUpdateServer(ds);
         }
     }
 }

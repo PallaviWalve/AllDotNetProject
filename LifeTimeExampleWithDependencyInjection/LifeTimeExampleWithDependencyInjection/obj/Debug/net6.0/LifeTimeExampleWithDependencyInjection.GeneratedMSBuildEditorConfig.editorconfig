@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LifeTimeExampleWithDependencyInjection
+build_property.RootNamespace = LifeTimeExampleWithDependencyInjection
+build_property.ProjectDir = C:\Users\CDAC\Desktop\Lab .net\LifeTimeExampleWithDependencyInjection\LifeTimeExampleWithDependencyInjection\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\CDAC\Desktop\Lab .net\LifeTimeExampleWithDependencyInjection\LifeTimeExampleWithDependencyInjection
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/SomeAction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNvbWVBY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/_Greetings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HcmVldGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Student/ShowValues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93VmFsdWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Supplier/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Supplier/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Supplier/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-votsdpqd4l
+
+[C:/Users/CDAC/Desktop/Lab .net/LifeTimeExampleWithDependencyInjection/LifeTimeExampleWithDependencyInjection/Views/Shared/_SiteLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaXRlTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-mkofx3io6n

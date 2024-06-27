@@ -1,0 +1,12 @@
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\bin\Debug\net6.0\BALDBFirstLibrary.deps.json
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\bin\Debug\net6.0\BALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\bin\Debug\net6.0\BALDBFirstLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\refint\BALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\BALDBFirstLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\BALDBFirstLibrary\obj\Debug\net6.0\ref\BALDBFirstLibrary.dll

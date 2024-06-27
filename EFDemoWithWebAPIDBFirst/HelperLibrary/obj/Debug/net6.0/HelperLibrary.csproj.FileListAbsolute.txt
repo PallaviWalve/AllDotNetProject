@@ -1,0 +1,15 @@
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\bin\Debug\net6.0\HelperLibrary.deps.json
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\bin\Debug\net6.0\HelperLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\bin\Debug\net6.0\HelperLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\bin\Debug\net6.0\DALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\bin\Debug\net6.0\DALDBFirstLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.csproj.CopyComplete
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\refint\HelperLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\HelperLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\HelperLibrary\obj\Debug\net6.0\ref\HelperLibrary.dll

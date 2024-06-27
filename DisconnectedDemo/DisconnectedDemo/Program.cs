@@ -34,11 +34,20 @@ internal class Program
                 break;
 
             case 3:
-                CustomerBAL customerBAL = new CustomerBAL();
-                Console.WriteLine("Enter Id to Find Customer");
-                int id = Convert.ToInt32(Console.ReadLine());
-                helper.FindCustomer(id);
+                List<CustomerBAL> lists = new List<CustomerBAL>();
+                lists = helper.GetCustomers();
+                Console.WriteLine("Enter the Id");
+                int id = Convert.ToInt32(Console.ReadLine());   
 
+                foreach (CustomerBAL item in lists)
+                {
+                    if (item.CustomerId == id)
+                    {
+                        Console.WriteLine(item.CustomerId);
+                        Console.WriteLine(item.CustName);
+                    }
+                   
+                }
                 break;
 
             case 4:

@@ -1,0 +1,15 @@
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\bin\Debug\net6.0\LINQDemo.exe
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\bin\Debug\net6.0\LINQDemo.deps.json
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\bin\Debug\net6.0\LINQDemo.runtimeconfig.json
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\bin\Debug\net6.0\LINQDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\bin\Debug\net6.0\LINQDemo.pdb
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\refint\LINQDemo.dll
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.pdb
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\LINQDemo.genruntimeconfig.cache
+C:\Users\CDAC\Desktop\Lab .net\LINQDemo\LINQDemo\obj\Debug\net6.0\ref\LINQDemo.dll

@@ -1,0 +1,14 @@
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\bin\Debug\net6.0\DALDBFirstLibrary.deps.json
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\bin\Debug\net6.0\DALDBFirstLibrary.runtimeconfig.json
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\bin\Debug\net6.0\DALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\bin\Debug\net6.0\DALDBFirstLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.csproj.AssemblyReference.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.AssemblyInfoInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.AssemblyInfo.cs
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.csproj.CoreCompileInputs.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\refint\DALDBFirstLibrary.dll
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.pdb
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\DALDBFirstLibrary.genruntimeconfig.cache
+C:\Users\CDAC\Desktop\Lab .net\EFDemoWithWebAPIDBFirst\DALDBFirstLibrary\obj\Debug\net6.0\ref\DALDBFirstLibrary.dll
